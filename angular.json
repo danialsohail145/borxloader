@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "borxloader": {
+      "projectType": "library",
+      "root": "projects/borxloader",
+      "sourceRoot": "projects/borxloader/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/borxloader/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/borxloader/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/borxloader/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/borxloader/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
