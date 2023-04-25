@@ -1,27 +1,89 @@
-# Borxloader
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+# BorXLoader
 
-## Development server
+NPM Package used as a loader/spinner for angular application.
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Four types of loader/spinner is integrated
+- Image is added on the loader
+- Can be used from any component
+- Customize functionality
+- Show/Hide any features based on configuration
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install borxloader with npm
 
-## Running unit tests
+```bash
+  npm install borxloader
+```
+    
+## Usage/Examples
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- import BorxloaderModule 
 
-## Running end-to-end tests
+```javascript
+// app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+ 
+import { BorxloaderModule } from 'borxloader';
+ 
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BorxloaderModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+And you are good to go...
 
-## Further help
+Use it in your app.component.html
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```javascript
+<borx-loader></borx-loader>
+```
+By-default has congifuration in which every feature is enabled but you modify it according to your need.
+
+```javascript
+config = {
+    image: 'Your Image Source Link',
+    loaderType: 'ring',
+    loaderColor: 'black',
+    showImage: true,
+    showSpinner: true,
+    showBackdrop: true,
+  }
+```
+- ```image``` source link of your image.
+- ```loaderType``` define which type of loader you want to use. Four types has been integrated as  ``` ring | roller | spinner | ellipsis```
+- ```loaderColor``` Color code for the loader/spinner.
+- ```showImage``` Boolean if you want to show image along with loader or not.
+- ```showSpinner``` Boolean if you want to show spinner or not.
+- ```showBackdrop``` Boolean if you want to show backdrop or not.
+
+you have to pass this configuration allong with borx-loader in app.component.html 
+
+```javascript
+<borx-loader [config]="config"></borx-loader>
+```
+## Authors
+
+- [@danialsohail145](https://github.com/danialsohail145)
+
+
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/danial-sohail-4470a2123/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/danial__sohail)
+
