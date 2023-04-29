@@ -1,6 +1,6 @@
 {
   "name": "borxloader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "NPM Package used as a loader/spinner for angular application.",
   "author": {
     "name": "BorXDev",
