@@ -1,6 +1,18 @@
 {
   "name": "borxloader",
   "version": "0.0.1",
+  "description": "NPM Package used as a loader/spinner for angular application.",
+  "author": {
+    "name": "BorXDev",
+    "email": "danialsohail145@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danialsohail145/borxloader.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/danial145"
+  },
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0"
